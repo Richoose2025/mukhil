@@ -63,7 +63,8 @@ export default function Home() {
             >
               Computer Applications Graduate & Technology Enthusiast
             </motion.p>
-            <motion.div
+  
+<motion.div
   className="flex space-x-4 pt-4"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
@@ -73,6 +74,10 @@ export default function Home() {
     variant="cyan"
     size="pill"
     className="hover:scale-105 transition-all duration-300 group"
+    onClick={() => {
+      navigator.clipboard.writeText("yourname@example.com");
+      // Optional: You could add a toast notification here
+    }}
   >
     <Mail className="text-cyan-300 group-hover:text-white transition-colors" />
     <span className="relative overflow-hidden">
@@ -85,24 +90,38 @@ export default function Home() {
     variant="purple"
     size="pill"
     className="hover:scale-105 transition-all duration-300 group"
+    asChild
   >
-    <Github className="text-purple-300 group-hover:text-white transition-colors" />
-    <span className="relative overflow-hidden">
-      <span className="relative z-10 group-hover:text-white transition-colors">GitHub</span>
-      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></span>
-    </span>
+    <a 
+      href="https://github.com/mukhils074" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <Github className="text-purple-300 group-hover:text-white transition-colors" />
+      <span className="relative overflow-hidden">
+        <span className="relative z-10 group-hover:text-white transition-colors">GitHub</span>
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></span>
+      </span>
+    </a>
   </Button>
   
   <Button
     variant="blue"
     size="pill"
     className="hover:scale-105 transition-all duration-300 group"
+    asChild
   >
-    <Linkedin className="text-blue-300 group-hover:text-white transition-colors" />
-    <span className="relative overflow-hidden">
-      <span className="relative z-10 group-hover:text-white transition-colors">LinkedIn</span>
-      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-    </span>
+    <a 
+      href="https://www.linkedin.com/in/mukhil-s-101628363" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <Linkedin className="text-blue-300 group-hover:text-white transition-colors" />
+      <span className="relative overflow-hidden">
+        <span className="relative z-10 group-hover:text-white transition-colors">LinkedIn</span>
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
+      </span>
+    </a>
   </Button>
 </motion.div>
           </motion.div>
