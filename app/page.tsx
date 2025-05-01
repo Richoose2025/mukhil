@@ -141,7 +141,7 @@ export default function Home() {
               className="absolute inset-0 bg-gradient-to-bl from-cyan-500/10 to-purple-500/10 z-10 animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
-            <Image src="/placeholder.svg?height=320&width=320" alt="Mukhil S" fill className="object-cover" priority />
+            <Image src="./img/mu.png?height=320&width=320" alt="Mukhil S" fill className="object-cover" priority />
             <motion.div
               className="absolute inset-0 border-8 border-transparent rounded-full"
               animate={{
